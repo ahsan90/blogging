@@ -77,3 +77,17 @@ input{height: auto !important;}
   }
 }
 .field_with_errors { @extend .control-group; @extend .error; }
+
+.users {
+  list-style: none;
+  margin: 0;
+  text-align: left;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $gray-lighter;
+    &:last-child {
+      border-bottom: 1px solid $gray-lighter;
+    }
+  }
+}
