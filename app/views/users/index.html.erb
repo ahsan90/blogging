@@ -2,10 +2,6 @@
 <h2>All users</h2>
 <%= will_paginate %>
 <ul class="users">
-  <% @users.each do |user| %>
-  <li>
-    <%= link_to user.name, user %>
-  </li>
- <% end %>
+  <%= render @users %>
 </ul>
 <%= will_paginate %>
