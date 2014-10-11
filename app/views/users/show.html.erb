@@ -4,8 +4,12 @@
     <section>
       <h1><%= @user.name %></h1>
     </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
   </aside>
   <div class="col-lg-9 col-xs-9">
+    <%= render 'follow_form' if signed_in? %>
     <% if @user.microposts.any? %>
      <h3>Microposts (<%= @user.microposts.count %>)</h3>
         <ol class="microposts">
@@ -16,4 +20,5 @@
         <h3>No Microposts found</h3>
     <% end %>
   </div>
+
 </div>
